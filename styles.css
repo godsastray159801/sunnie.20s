@@ -1,0 +1,201 @@
+
+/* CSS styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FDF6EF; /* Đặt màu nền cho trang web */
+    position: relative; /* Thiết lập body là relative để tạo điểm reference cho absolute positioning */
+}
+
+nav {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* Chia không gian đều giữa các phần tử */
+    align-items: center;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #B44D39; /* Đổi màu chữ */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #B44D39; /* Đổi màu hiệu ứng */
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+nav ul li a:hover {
+    color: #777;
+}
+/*section home*/
+
+#home {
+    text-align: center; /* Căn giữa nội dung theo chiều ngang */
+    padding: 50px 0; /* Tăng khoảng cách giữa các phần tử */
+}
+
+.container_home {
+    max-width: 600px; /* Đặt chiều rộng tối đa cho phần nội dung */
+    margin: 0 auto; /* Căn giữa theo chiều ngang */
+}
+
+.container_home img {
+    width: 200px; /* Điều chỉnh kích thước của hình ảnh */
+    height: auto;
+    display: block; /* Hiển thị hình ảnh ở giữa */
+    margin: 0 auto 20px; /* Căn giữa theo chiều ngang và thêm khoảng cách dưới */
+}
+
+.container_home h2 {
+    font-size: 24px; /* Điều chỉnh kích thước của tiêu đề */
+    margin-bottom: 2px; /* Thêm khoảng cách dưới tiêu đề */
+    color: #B44D39; /* Đổi màu chữ */
+}
+
+.container_home h3 {
+    font-size: 18px; /* Điều chỉnh kích thước của tiêu đề phụ */
+    margin-bottom: 20px; /* Thêm khoảng cách dưới tiêu đề phụ */
+    color: #B44D39; /* Đổi màu chữ */
+}
+
+.container_home p {
+    font-size: 16px; /* Điều chỉnh kích thước của đoạn văn */
+    line-height: 1.6; /* Điều chỉnh độ cao của dòng */
+}
+/*Social*/
+.social-links {
+    list-style-type: none; /* Loại bỏ bullet points cho danh sách */
+    padding: 0; /* Xóa padding mặc định của danh sách */
+    margin: 0; /* Xóa margin mặc định của danh sách */
+}
+
+.social-links li {
+    display: inline-block; /* Hiển thị các phần tử li trên cùng một hàng ngang */
+    margin-right: 10px; /* Khoảng cách giữa các phần tử li */
+}
+
+.social-links img {
+    width: 30px; /* Đặt kích thước của hình ảnh là 20px */
+    height: auto; /* Đảm bảo tỷ lệ khung hình bảo toàn */
+}
+/*About*/
+/* CSS styling for section About */
+#about {
+    padding: 50px 0; /* Thêm padding để tạo khoảng cách giữa phần nội dung và các phần khác */
+}
+
+#about .container_about {
+    display: flex; /* Hiển thị các phần tử bên trong container_about theo kiểu flexbox */
+    justify-content: space-between; /* Căn các phần tử theo chiều ngang và giãn ra cực đại */
+    align-items: center; /* Căn các phần tử theo chiều dọc */
+}
+#about table {
+    width: 100%; /* Bảng chiếm toàn bộ chiều rộng của phần About */
+    border-collapse: collapse; /* Loại bỏ đường biên giữa các ô */
+    
+}
+
+#about .image-column,
+#about .content-column {
+    width: 50%; /* Thiết lập kích thước của mỗi cột là 50% của trang */
+    vertical-align: top; /* Căn nội dung trong cột lên đầu cột */
+    padding: 0px; /* Thêm padding để tạo khoảng cách */
+}
+
+#about .image-container img {
+    max-width: 60%; /* Hình ảnh tự động co giãn để vừa với kích thước của div */
+    height: auto; /* Chiều cao của hình ảnh tự động tính toán */
+}
+
+#about .image-container {
+    flex: 0 0 auto; /* Định kích thước của image-container là tự động */
+}
+
+#about .content {
+    flex: 0 0 auto; /* Định kích thước của content là tự động */
+   
+
+}
+
+#about .title {
+    text-align: center; /* Căn giữa tiêu đề "About" */
+    color: #B44D39;
+}
+
+#about ul {
+    display: flex; /* Hiển thị các phần tử bên trong danh sách theo kiểu flexbox */
+    padding-left: 0; /* Loại bỏ padding mặc định của danh sách */
+    list-style-type: none; /* Loại bỏ dấu đầu dòng của danh sách */
+}
+
+#about ul li {
+    margin-right: 30% /* Tạo khoảng cách giữa các mục trong danh sách */
+}
+
+#about ul li:last-child {
+    margin-right: 0; /* Loại bỏ margin-right của phần tử cuối cùng để tránh khoảng cách thừa */
+    margin-bottom: 1px; /* Thiết lập khoảng cách dưới của mỗi phần tử li là 10px */
+    padding-bottom: 0px; /* Thiết lập khoảng cách dưới của nội dung trong mỗi phần tử li là 10px */
+
+}
+#about .content table {
+    width: 100%; /* Thiết lập kích thước của bảng là 100% chiều rộng của phần About */
+    border-collapse: collapse; /* Loại bỏ đường biên giữa các ô */
+}
+
+#about .content td {
+    width: 100%; /* Thiết lập kích thước của mỗi cột là 50% của bảng */
+    vertical-align: top; /* Căn nội dung trong cột lên đầu cột */
+    padding: 20px; /* Thêm padding để tạo khoảng cách */
+}
+
+
+
+
+
+
+
